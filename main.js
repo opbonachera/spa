@@ -9,13 +9,15 @@ const root = d.getElementById("root");
 const navigate = (routeSegment) =>{
     const route = routes.find((r)=> r.path === routeSegment);
     let component; 
-    
+
     if(route){
         component = route.component();      
         updateWindowHistory(route.path);  
     }else{
         component = NotFound();
     } 
+
+    
 
     renderComponent(component);
 }

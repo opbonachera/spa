@@ -1,9 +1,9 @@
 const listItems = [
         { 'label': 'About', 'href' : '/about'},
-        { 'label': 'Home', 'href' : '/home'},
+        { 'label': 'Home', 'href' : '/'},
         { 'label': 'Recipes', 'href' : '/recipes'},
-        { 'label': 'Log in', 'href' : '/'},
-        { 'label': 'Contact', 'href' : '/'},
+        { 'label': 'Log in', 'href' : '/login'},
+        { 'label': 'Contact', 'href' : '/contact'},
     ]
 export const Navbar = () =>{
     const section = document.createElement('div');

@@ -4,6 +4,6 @@ import { RecipeList } from '../components/RecipeList.js'
 
 export const routes = [
     {'path': '/about', 'component': About },
-    {'path': '/home', 'component': Home},
+    {'path': '/', 'component': Home},
     {'path': '/recipes', 'component': RecipeList },
 ]
