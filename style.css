@@ -1,17 +1,17 @@
 *{
-  font-family: "Inter", sans-serif;
+  font-family: "Inter";
   font-optical-sizing: auto;
+  font-size: 1.1rem;
 }
-
-#root{
-  height: 100vh;
-}
-
 
 .hover-effect {
   display: inline-block;
   position: relative;
-  color: rgba(0, 0, 0, 0.93);
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.hover-effect{
+  cursor: pointer;
 }
 
 .hover-effect::after {
@@ -22,21 +22,194 @@
   height: 2px;
   bottom: 0;
   left: 0;
+  cursor: pointer;
   background-color: rgba(227, 227, 227, 0.93);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
 
-.hover-effect:hover::after {
+.hover-effect:hover::after
+{
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.home-button{
-  height: 5.5rem;
-  background-color: black;
-  border: none;
+/* Navbar styling */
+nav {
+  background-color: red;
   color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  display: flex;
+  font-family: Inter;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-shadow: -6px 11px 7px -6px rgba(0,0,0,0.08);
+  -webkit-box-shadow: -6px 11px 7px -6px rgba(0,0,0,0.08);
+  -moz-box-shadow: -6px 11px 7px -6px rgba(0,0,0,0.08);
+}
+
+.nav-title {
+  font-size: 2rem;
+  margin-top: 0.3rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.list-element {
+  font-family: Inter;
+  display: inline-block;
+  margin: auto;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-menu {
+      width: 100%;
+      justify-content: center;
+  }
+
+  .list-element {
+      padding: 0.5rem;
+      width: auto;
+      text-align: center;
+  }
+}
+
+/* Main tag styling */
+main
+{
+  width: 100%;
+}
+
+.home-container {
+  background-color: rgba(243, 243, 243, 0.151);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  width: 45vw;
+  height: 90vh;
+  scroll-behavior: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Inter;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item {
+    width: 90vw; /* Adjust width to fit mobile screen */
+    height: auto; /* Adjust height as needed */
+  }
+}
+
+
+.img-home
+{
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.home-button
+{
+  background-color: red;
+  width: 15rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border-color: transparent;
+  color: white;
+}
+/*List of recipes*/
+
+.list-title
+{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.recipe-list-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px; /* Adding gap between grid items */
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+}
+
+.card-container {
+  margin: auto;
+  padding: 2rem;
+  font-size: 30px;
+  width: 30vw;
+  height: fit-content;
+  text-align: center;
+  background-color: rgba(245, 245, 245, 0.749);
+  scroll-behavior: unset;
+  font-family: Inter;
+  border: solid 1px grey;
+  border-radius: 10px;
+  color: rgb(70, 70, 70);
+}
+
+@media (max-width: 700px) {
+  .recipe-list-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container{
+    width: 90vw; /* Adjust width to fit mobile screen */
+    height: auto; /* Adjust height as needed */
+  }
+}
+
+.recipe-image
+{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1.2rem;
+}
+
+/* About page styling */
+.about-container
+{
+  padding: 30px;
+  font-family: Inter, sans-serif;
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
